@@ -1,0 +1,115 @@
+﻿@model MVCServiciosMusicales.Models.Servicio
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Servicio</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Descripcion)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Descripcion)
+            @Html.ValidationMessageFor(model => model.Descripcion)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Costo)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Costo)
+            @Html.ValidationMessageFor(model => model.Costo)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Piezas_Id, "Piezas")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("Piezas_Id", String.Empty)
+            @Html.ValidationMessageFor(model => model.Piezas_Id)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Garantia)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Garantia)
+            @Html.ValidationMessageFor(model => model.Garantia)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TipoServicio_Id, "TipoServicio")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("TipoServicio_Id", String.Empty)
+            @Html.ValidationMessageFor(model => model.TipoServicio_Id)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Instrucciones_Id, "Instrucciones")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("Instrucciones_Id", String.Empty)
+            @Html.ValidationMessageFor(model => model.Instrucciones_Id)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Fecha)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Fecha)
+            @Html.ValidationMessageFor(model => model.Fecha)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Estado_Id, "Estado")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("Estado_Id", String.Empty)
+            @Html.ValidationMessageFor(model => model.Estado_Id)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FechaProxRev)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FechaProxRev)
+            @Html.ValidationMessageFor(model => model.FechaProxRev)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Tecnico_Id, "Tecnico")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("Tecnico_Id", String.Empty)
+            @Html.ValidationMessageFor(model => model.Tecnico_Id)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.InstrumentoMusical_Id, "InstrumentoMusical")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("InstrumentoMusical_Id", String.Empty)
+            @Html.ValidationMessageFor(model => model.InstrumentoMusical_Id)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

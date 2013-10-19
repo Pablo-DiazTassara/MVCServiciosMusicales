@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <header class="header">
+            <div class="container">
+                <div class="row">
+                    <div id="logo" class="span2">
+                        <img src="~/Content/Imagenes/ServiciosMusicales.png" />
+                    </div><!-- end logo -->
+                    
+                    <nav id="nav" class="main-navigation span10">
+                        <ul class="navigation">
+                            <li>
+                                @Html.ActionLink("Inicio", "Index", "Home")                                
+                            </li>
+                            <li>
+                                 @Html.ActionLink("Cliente", "Index", "Cliente")
+                            </li>
+                            <li>
+                                 @Html.ActionLink("Instrumento Musical", "Index", "InstrumentoMusical")
+                                <!--
+                                <a href="tours-3-column.html">Tours</a>
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a href="tours-1-column.html">One colum</a>
+                                    </li>
+                                    <li>
+                                        <a href="roma-single-full-width.html">Full width tour</a>
+                                    </li>
+                                    <li>
+                                        <a href="tours-3-column-left.html">Left sidebar</a>
+                                    </li>
+                                </ul>
+                                    -->
+                            </li>
+                            <li>
+                               <!--
+                                 <a href="#">Pages</a>
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a href="sample-page.html">Sample Page</a>
+                                    </li>
+                                    <li>
+                                        <a href="full-width.html">Full width</a>
+                                    </li>
+                                </ul>
+                                   -->
+                            </li>                          
+                            <li>
+                                @Html.ActionLink("Contacto", "Index", "Contacto")
+                            </li>                            
+                        </ul>
+                    </nav><!-- end nav -->
+                   
+
+                </div> <!-- end row -->
+            </div> <!-- end container -->
+        </header><!-- end header -->
+    
+    <div class="body">
+         <div class="container">
+             <div class="articles-container">
+
+                <article class="article article-box page-content">
+
+            @RenderBody()
+                    </article>
+                 </div>
+        </div>
+    </div>
+              
+
+         <footer>
+             <div class="container">
+                 <div class="row">
+                    <div class="span12">
+                        <div class="footer">
+                            <p>Sistemas Musicales by Pablo Diaz Tassara</p>
+                        </div>
+
+                    </div>
+                     </div>
+             </div>
+                </footer>
+
+    </div>
+
+   
+
+    @Scripts.Render("~/bundles/jquery")
+     @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

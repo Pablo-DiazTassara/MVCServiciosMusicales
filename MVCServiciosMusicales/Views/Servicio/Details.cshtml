@@ -1,0 +1,92 @@
+﻿@model MVCServiciosMusicales.Models.Servicio
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Servicio</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Descripcion)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Descripcion)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Costo)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Costo)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Piezas.Descripcion)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Piezas.Descripcion)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Garantia)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Garantia)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TipoServicio.Descripcion)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TipoServicio.Descripcion)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Instrucciones.Descripcion)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Instrucciones.Descripcion)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Fecha)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Fecha)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Estado.Descripcion)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Estado.Descripcion)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.FechaProxRev)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FechaProxRev)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Tecnico.Nombre)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Tecnico.Nombre)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.InstrumentoMusical.Nombre)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.InstrumentoMusical.Nombre)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

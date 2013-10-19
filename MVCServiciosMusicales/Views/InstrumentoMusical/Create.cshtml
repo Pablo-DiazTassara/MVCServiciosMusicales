@@ -1,0 +1,59 @@
+﻿@model MVCServiciosMusicales.Models.InstrumentoMusical
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>InstrumentoMusical</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Nombre)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Nombre)
+            @Html.ValidationMessageFor(model => model.Nombre)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TipoInstrumento_Id, "TipoInstrumento")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("TipoInstrumento_Id", String.Empty)
+            @Html.ValidationMessageFor(model => model.TipoInstrumento_Id)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Estado)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Estado)
+            @Html.ValidationMessageFor(model => model.Estado)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Antiguedad)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Antiguedad)
+            @Html.ValidationMessageFor(model => model.Antiguedad)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,0 +1,43 @@
+﻿@model MVCServiciosMusicales.Models.InstrumentoMusical
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>InstrumentoMusical</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Nombre)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Nombre)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TipoInstrumento.Descripcion)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TipoInstrumento.Descripcion)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Estado)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Estado)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Antiguedad)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Antiguedad)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

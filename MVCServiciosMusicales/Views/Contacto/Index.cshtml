@@ -1,0 +1,49 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Contacto</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="span12">
+            
+
+              
+
+                    <address>
+                        <strong>Servicios Musicales</strong><br>
+                        Hypolito Irigoyen 900
+                        <br>
+                        Ciudad de Buenos aires<br>
+                        <abbr title="Phone">Telefono:</abbr>
+                        (011) 4456-7890
+                    </address>
+
+                    <form class="form-horizontal" id="contact-form" novalidate="">
+                        <div class="control-group">
+                            <input type="text" required="" name="name">
+                            <label for="name">Nombre</label>
+                            <p class="help-block"></p>
+                        </div>
+                        <div class="control-group">
+                            <input type="email" required="" name="email">
+                            <label for="email">Email</label>
+                            <p class="help-block"></p>
+                        </div>
+                        <div class="control-group">
+                            <textarea name="message" cols="30" rows="10"></textarea>
+                        </div>
+                        <div class="formactions">
+                            <button class="btn-new green-color" type="submit">
+                                Enviar mensaje
+                            </button>
+                        </div>
+                    </form>
+               
+
+           
+        </div>
+    </div>
+</div>

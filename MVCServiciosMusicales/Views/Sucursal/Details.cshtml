@@ -1,0 +1,29 @@
+﻿@model MVCServiciosMusicales.Models.Sucursal
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Sucursal</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Zona)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Zona)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Descripcion)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Descripcion)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

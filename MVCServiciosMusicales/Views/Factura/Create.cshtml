@@ -1,0 +1,67 @@
+﻿@model MVCServiciosMusicales.Models.Factura
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Factura</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Numero)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Numero)
+            @Html.ValidationMessageFor(model => model.Numero)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Fecha)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Fecha)
+            @Html.ValidationMessageFor(model => model.Fecha)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Servicio_Id, "Servicio")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("Servicio_Id", String.Empty)
+            @Html.ValidationMessageFor(model => model.Servicio_Id)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Sucursal_Id, "Sucursal")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("Sucursal_Id", String.Empty)
+            @Html.ValidationMessageFor(model => model.Sucursal_Id)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Monto)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Monto)
+            @Html.ValidationMessageFor(model => model.Monto)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

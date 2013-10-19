@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C441DDD3-A98E-486C-9CCD-F5260E2306A6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DAL</RootNamespace>
+    <AssemblyName>DAL</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Caching, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TestWeb\bin\Microsoft.Practices.EnterpriseLibrary.Caching.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TestWeb\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TestWeb\bin\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TestWeb\bin\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TestWeb\bin\Microsoft.Practices.EnterpriseLibrary.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Security, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TestWeb\bin\Microsoft.Practices.EnterpriseLibrary.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ObjectBuilder, Version=1.0.51206.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TestWeb\bin\Microsoft.Practices.ObjectBuilder.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Adapters\ClienteAdapter.cs" />
+    <Compile Include="Adapters\ClienteCollectionAdapter.cs" />
+    <Compile Include="Cliente.cs" />
+    <Compile Include="ClienteFacade.cs" />
+    <Compile Include="Adapters\DireccionAdapter.cs" />
+    <Compile Include="Adapters\DireccionCollectionAdapter.cs" />
+    <Compile Include="Direccion.cs" />
+    <Compile Include="DireccionFacade.cs" />
+    <Compile Include="Adapters\TipoClienteAdapter.cs" />
+    <Compile Include="Adapters\TipoClienteCollectionAdapter.cs" />
+    <Compile Include="TipoCliente.cs" />
+    <Compile Include="TipoClienteFacade.cs" />
+    <Compile Include="Adapters\InstrumentoMusicalAdapter.cs" />
+    <Compile Include="Adapters\InstrumentoMusicalCollectionAdapter.cs" />
+    <Compile Include="InstrumentoMusical.cs" />
+    <Compile Include="InstrumentoMusicalFacade.cs" />
+    <Compile Include="Adapters\ServicioAdapter.cs" />
+    <Compile Include="Adapters\ServicioCollectionAdapter.cs" />
+    <Compile Include="Servicio.cs" />
+    <Compile Include="ServicioFacade.cs" />
+    <Compile Include="Adapters\PiezasAdapter.cs" />
+    <Compile Include="Adapters\PiezasCollectionAdapter.cs" />
+    <Compile Include="Piezas.cs" />
+    <Compile Include="PiezasFacade.cs" />
+    <Compile Include="Adapters\EstadoAdapter.cs" />
+    <Compile Include="Adapters\EstadoCollectionAdapter.cs" />
+    <Compile Include="Estado.cs" />
+    <Compile Include="EstadoFacade.cs" />
+    <Compile Include="Adapters\TipoServicioAdapter.cs" />
+    <Compile Include="Adapters\TipoServicioCollectionAdapter.cs" />
+    <Compile Include="TipoServicio.cs" />
+    <Compile Include="TipoServicioFacade.cs" />
+    <Compile Include="Adapters\TecnicoAdapter.cs" />
+    <Compile Include="Adapters\TecnicoCollectionAdapter.cs" />
+    <Compile Include="Tecnico.cs" />
+    <Compile Include="TecnicoFacade.cs" />
+    <Compile Include="Adapters\InstruccionesAdapter.cs" />
+    <Compile Include="Adapters\InstruccionesCollectionAdapter.cs" />
+    <Compile Include="Instrucciones.cs" />
+    <Compile Include="InstruccionesFacade.cs" />
+    <Compile Include="Adapters\FacturaAdapter.cs" />
+    <Compile Include="Adapters\FacturaCollectionAdapter.cs" />
+    <Compile Include="Factura.cs" />
+    <Compile Include="FacturaFacade.cs" />
+    <Compile Include="Adapters\SucursalAdapter.cs" />
+    <Compile Include="Adapters\SucursalCollectionAdapter.cs" />
+    <Compile Include="Sucursal.cs" />
+    <Compile Include="SucursalFacade.cs" />
+    <Compile Include="Adapters\TipoInstrumentoAdapter.cs" />
+    <Compile Include="Adapters\TipoInstrumentoCollectionAdapter.cs" />
+    <Compile Include="TipoInstrumento.cs" />
+    <Compile Include="TipoInstrumentoFacade.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SQL.sql" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

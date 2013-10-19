@@ -1,0 +1,53 @@
+﻿@model MVCServiciosMusicales.Models.Factura
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Factura</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Numero)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Numero)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Fecha)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Fecha)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Servicio.Descripcion)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Servicio.Descripcion)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Sucursal.Zona)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Sucursal.Zona)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Monto)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Monto)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}
